@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefWidth="1000.0" prefHeight="650.0"
+    xmlns="http://javafx.com/javafx/17"
+    xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="controller.DashboardController">
+
+    <!-- Top -->
+    <top>
+        <HBox spacing="10" alignment="CENTER_LEFT"
+            style="-fx-padding: 15; -fx-background-color: #2f80ed;">
+            <Label text="Course Registration System"
+                styleClass="title"
+                style="-fx-text-fill: white;" />
+        </HBox>
+    </top>
+
+    <!-- Sidebar -->
+    <left>
+        <VBox spacing="12" styleClass="sidebar">
+            <Label text="Menu" styleClass="title" />
+            <Separator />
+
+            <Button text="Students" onAction="#openStudents" />
+            <Button text="Courses" onAction="#openCourses" />
+            <Button text="Enrollment" onAction="#openEnrollment" />
+
+            <Separator />
+            <Button text="Logout"
+                styleClass="logout"
+                onAction="#handleLogout" />
+        </VBox>
+    </left>
+
+    <!-- Center -->
+    <center>
+        <VBox spacing="20" style="-fx-padding: 25;">
+            <Label text="Welcome 👋" styleClass="title" />
+
+            <HBox spacing="20">
+                <VBox styleClass="card">
+                    <Label text="Students" />
+                    <Label text="--" styleClass="title" />
+                </VBox>
+
+                <VBox styleClass="card">
+                    <Label text="Courses" />
+                    <Label text="--" styleClass="title" />
+                </VBox>
+
+                <VBox styleClass="card">
+                    <Label text="Enrollments" />
+                    <Label text="--" styleClass="title" />
+                </VBox>
+            </HBox>
+        </VBox>
+    </center>
+
+</BorderPane>

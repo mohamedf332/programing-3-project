@@ -1,0 +1,56 @@
+/* ===== Root ===== */
+.root {
+    -fx-font-family: "Segoe UI", Arial;
+    -fx-background-color: #ffffff;
+}
+
+/* ===== Labels ===== */
+.label {
+    -fx-font-size: 14px;
+}
+
+/* Titles */
+.title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+/* ===== Text Fields ===== */
+.text-field,
+.password-field {
+    -fx-pref-height: 35;
+}
+
+/* ===== Buttons ===== */
+.button {
+    -fx-background-color: #2f80ed;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-background-radius: 5;
+}
+
+.button:hover {
+    -fx-background-color: #1c66d3;
+}
+
+/* Danger Button (Logout) */
+.button.logout {
+    -fx-background-color: #e74c3c;
+}
+
+.button.logout:hover {
+    -fx-background-color: #c0392b;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+    -fx-background-color: #f4f4f4;
+    -fx-padding: 15;
+}
+
+/* ===== Cards ===== */
+.card {
+    -fx-background-color: #e8f0fe;
+    -fx-padding: 15;
+    -fx-background-radius: 8;
+}

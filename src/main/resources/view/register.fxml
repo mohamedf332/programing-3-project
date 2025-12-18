@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane prefWidth="600.0" prefHeight="450.0"
+    alignment="CENTER"
+    hgap="10" vgap="10"
+    style="-fx-padding: 20;"
+    xmlns="http://javafx.com/javafx/17"
+    xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="controller.RegisterController">
+
+    <columnConstraints>
+        <ColumnConstraints halignment="RIGHT" prefWidth="180" />
+        <ColumnConstraints halignment="LEFT" prefWidth="260" />
+    </columnConstraints>
+
+    <rowConstraints>
+        <RowConstraints prefHeight="40" />
+        <RowConstraints prefHeight="40" />
+        <RowConstraints prefHeight="40" />
+        <RowConstraints prefHeight="50" />
+        <RowConstraints prefHeight="40" />
+    </rowConstraints>
+
+    <!-- Title -->
+    <Label text="Create New Account"
+        style="-fx-font-size: 20px; -fx-font-weight: bold;"
+        GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+    <!-- Username -->
+    <Label text="Username:"
+        GridPane.rowIndex="1" GridPane.columnIndex="0" />
+    <TextField fx:id="usernameField"
+        promptText="Enter username"
+        GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+    <!-- Password -->
+    <Label text="Password:"
+        GridPane.rowIndex="2" GridPane.columnIndex="0" />
+    <PasswordField fx:id="passwordField"
+        promptText="Enter password"
+        GridPane.rowIndex="2" GridPane.columnIndex="1" />
+
+    <!-- Confirm Password -->
+    <Label text="Confirm Password:"
+        GridPane.rowIndex="3" GridPane.columnIndex="0" />
+    <PasswordField fx:id="confirmPasswordField"
+        promptText="Re-enter password"
+        GridPane.rowIndex="3" GridPane.columnIndex="1" />
+
+    <!-- Buttons -->
+    <HBox spacing="10" alignment="CENTER_RIGHT"
+        GridPane.rowIndex="4" GridPane.columnIndex="1">
+        <Button text="Register" onAction="#handleRegister" />
+        <Button text="Back to Login" onAction="#backToLogin" />
+    </HBox>
+
+    <!-- Error Message -->
+    <Label fx:id="errorLabel"
+        textFill="RED"
+        GridPane.rowIndex="5" GridPane.columnIndex="1" />
+</GridPane>
