@@ -34,8 +34,9 @@ public class LoginController {
     private void openDashboard() {
         try {
             FXMLLoader loader = new FXMLLoader(
-                    getClass().getResource("/view/dashboard.fxml"));
+                    getClass().getResource("/view/dashboard/dashboard.fxml"));
             Scene scene = new Scene(loader.load());
+            scene.getStylesheets().add(getClass().getResource("/css/style.css").toExternalForm());
 
             Stage stage = (Stage) usernameField
                     .getScene()
@@ -52,9 +53,10 @@ public class LoginController {
     @FXML
     private void openRegister() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/register.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/auth/register.fxml"));
 
             Scene scene = new Scene(loader.load());
+            scene.getStylesheets().add(getClass().getResource("/css/style.css").toExternalForm());
             Stage stage = (Stage) usernameField.getScene().getWindow();
             stage.setScene(scene);
 

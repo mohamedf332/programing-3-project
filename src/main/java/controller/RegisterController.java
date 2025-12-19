@@ -59,9 +59,10 @@ public class RegisterController {
     @FXML
     private void backToLogin() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/login.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/auth/login.fxml"));
 
             Scene scene = new Scene(loader.load());
+            scene.getStylesheets().add(getClass().getResource("/css/style.css").toExternalForm());
             Stage stage = (Stage) usernameField.getScene().getWindow();
             stage.setScene(scene);
 

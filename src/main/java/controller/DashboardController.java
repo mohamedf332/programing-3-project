@@ -14,6 +14,7 @@ public class DashboardController {
             FXMLLoader loader = new FXMLLoader(
                     getClass().getResource("/view/" + fxmlFile));
             Scene scene = new Scene(loader.load());
+            scene.getStylesheets().add(getClass().getResource("/css/style.css").toExternalForm());
 
             Stage stage = (Stage) ((Node) event.getSource())
                     .getScene().getWindow();
@@ -28,21 +29,21 @@ public class DashboardController {
 
     @FXML
     private void openStudents(ActionEvent event) {
-        switchScene(event, "students.fxml");
+        switchScene(event, "students/students.fxml");
     }
 
     @FXML
     private void openCourses(ActionEvent event) {
-        switchScene(event, "courses.fxml");
+        switchScene(event, "courses/courses.fxml");
     }
 
     @FXML
     private void openEnrollment(ActionEvent event) {
-        switchScene(event, "enrollment.fxml");
+        switchScene(event, "enrollment/enrollment.fxml");
     }
 
     @FXML
     private void handleLogout(ActionEvent event) {
-        switchScene(event, "login.fxml");
+        switchScene(event, "auth/login.fxml");
     }
 }

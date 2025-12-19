@@ -1,8 +1,8 @@
 package controller;
 
-import model.entity.Student;
-import service.StudentService;
-
+import com.solt.jdc.entity.Student;
+import com.solt.jdc.service.StudentService;
+import com.solt.jdc.utili.Validator;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -130,9 +130,8 @@ public class StudentsController {
     @FXML
     private void backToDashboard(ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/dashboard/dashboard.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/dashboard.fxml"));
             Scene scene = new Scene(loader.load());
-            scene.getStylesheets().add(getClass().getResource("/css/style.css").toExternalForm());
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(scene);
             stage.show();
